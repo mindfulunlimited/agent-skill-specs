@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "preferred": "mrrfast_csv_then_3ue",
+  "mrrfastCsv": {
+    "path": "/Users/qianliu/Documents/Projects/035 mrrfast/data/similarweb_3m_metrics.csv",
+    "columns": [
+      "domain",
+      "period",
+      "monthly_visits",
+      "unique_visitors",
+      "avg_visit_duration",
+      "pages_per_visit",
+      "bounce_rate",
+      "top_country"
+    ]
+  },
+  "threeUe": {
+    "base": "https://sim.3ue.com/#/activation/home",
+    "websitePerformanceUrlTemplate": "https://sim.3ue.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key={domain}",
+    "note": "Use this only when the domain is missing from the CSV; sim.3ue.com provides Similarweb PRO via 3ue Tools Share."
+  }
+}
