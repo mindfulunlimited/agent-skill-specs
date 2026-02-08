@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "default": {
+    "stage": "1_10",
+    "source": "mix",
+    "top_k": 30,
+    "watchlist_k": 50,
+    "recheck_days": 14
+  },
+  "stages": {
+    "0_1": { "min_visits": 2000 },
+    "1_10": { "min_visits": 10000 },
+    "10_100": { "min_visits": 30000 },
+    "100_plus": { "min_visits": 100000 }
+  },
+  "sources": {
+    "homepage": {
+      "urls": ["https://www.toolify.ai/"]
+    },
+    "mix": {
+      "urls": [
+        "https://www.toolify.ai/",
+        "https://www.toolify.ai/Best-trending-AI-Tools",
+        "https://www.toolify.ai/new",
+        "https://www.toolify.ai/popular"
+      ],
+      "note": "Non-homepage URLs may be blocked by anti-bot (403). The runner should skip blocked URLs and continue."
+    }
+  }
+}
