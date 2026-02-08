@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "preferred": "mrrfast_csv_then_3ue",
+  "preferred": "3ue_then_mrrfast_csv",
   "mrrfastCsv": {
     "path": "/Users/qianliu/Documents/Projects/035 mrrfast/data/similarweb_3m_metrics.csv",
     "columns": [

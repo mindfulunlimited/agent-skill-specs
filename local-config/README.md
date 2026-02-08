@@ -6,8 +6,8 @@ This folder is for **machine-local defaults** that multiple desktop agents can r
 - Prefer stable entrypoints and URL patterns.
 
 ## Similarweb source of truth on this machine
-1) Prefer cached/exported metrics in: `/Users/qianliu/Documents/Projects/035 mrrfast/data/similarweb_3m_metrics.csv`
-2) If missing for a domain, collect via 3ue Tools Share Similarweb PRO:
+1) Prefer collecting via **3ue Tools Share Similarweb PRO** (most consistent with our Semrush mirror workflow):
    - Home: https://sim.3ue.com/#/activation/home
    - Website performance URL pattern:
      `https://sim.3ue.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key=<domain>`
+2) Fallback: cached/exported metrics in: `/Users/qianliu/Documents/Projects/035 mrrfast/data/similarweb_3m_metrics.csv`
