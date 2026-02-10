@@ -11,12 +11,13 @@
 - 支持多页面信息架构（按需扩展）
 
 ## 输入（用户提供）
-**必填**
+**必填（硬门槛 / hard gate）**
 - domain: string（产品 id，例如 `burglingnomes.online`）
 - target: string（目标词）
 - keyword: string（主关键词；可与 target 相同或补充）
 - **anchorLink: string（权威锚点链接）**
   - 必须是“能唯一指向该游戏/产品”的权威页面：例如 Steam/Epic/App Store/Google Play/官方站/官方 Wiki/Roblox 游戏页。
+  - **没有 anchorLink：不进入 research/实现阶段**（直接向用户请求补充锚点）。
   - 目的：防止名称撞车导致 research / media library 跑偏。
 
 **默认值（除非用户覆盖）**
@@ -30,6 +31,13 @@
 - featureScope: 核心功能范围（MVP+后续）
 
 ## 输出（交付物）
+0) **Gate 0 护栏文档（必须先产出）**
+- `docs/GATE0_GUARDRAILS.md`
+  - anchorLink 摘要（官方事实点）
+  - 证据链/数据源（官方页 + media library）
+  - “可写/不可写”边界（尤其 codes/tier list 等）
+  - MVP 路由建议（可由 coding agent 调整，但不得违背锚点/真实性门槛）
+
 1) 本地项目目录（按产品编号）
 - Location: `~/Projects/<P####>_<domain>/`
 - Tech: Next.js（App Router 优先；TypeScript）
