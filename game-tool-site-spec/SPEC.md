@@ -71,8 +71,12 @@
 - **coding agent 负责“实现”**：基于上述证据链与 IA，将页面/工具/内链落地到 Next.js 工程。
 - 允许 coding agent 自行补充公开调研，但必须通过 `anchorLink` 做一致性校验。
 
-## Subagent 使用建议（重要）
+## Subagent / Coding Agent 使用建议（重要）
 - **不建议将“research + media library + 产品定位”交给全自动 subagent**（高歧义/易撞车/难验真）。
+- coding agent 适合做“实现落地”，但必须受控：
+  - **默认所有代码修改必须由 coding agent 完成**（主会话不直接改代码；主会话负责 prompt/验收/merge）。
+  - 必须有 **Stop-the-line** 机制：当锚点/PRD 语义空间变化或首页意图跑偏时，立即停止现有实现并重置 prompt。
+  - 必须有 **验收闸门**：不通过验收清单不得 merge/push main。
 - 可用 subagent 的部分：在锚点锁死后做“扩充/整理/表格化初稿”，但最终以主会话验收+落盘为准。
 
 ## 断点（建议 run 状态机；MVP 可先人工）
