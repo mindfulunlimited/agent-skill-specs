@@ -8,23 +8,34 @@ Default target is **Vercel**.
 ## Inputs
 Required:
 - `projectDir`: string (absolute path to local repo)
+- `domain`: string — apex domain to configure (e.g. `example.com`)
 
 Optional:
 - `provider`: enum = `vercel|cloudflare|vps` (default: `vercel`)
 - `vercelAccount`: string (default: `valueaddrei-beep`)  
   - If team scope is used, provide `vercelTeam` instead.
 - `vercelTeam`: string (optional)
-- `domain`: string (optional) — if provided, attempt to attach domain after deploy
 - `cloudflareZone`: string (optional) — if provider=cloudflare
 - `vpsHost`: string (optional) — if provider=vps
 
 ## Outputs
 - `deploymentUrl`: string (required) — e.g. https://xxx.vercel.app
 - `provider`: string
+- `dnsRecords`: array (required when provider=vercel)
+  - Return **what the user should set in Cloudflare DNS** for both apex and www.
+  - For Vercel (typical):
+    - apex (`@`) → **A** `76.76.21.21`
+    - `www` → **CNAME** `cname.vercel-dns.com`
+  - Always label:
+    - `name` (e.g. `@`, `www`)
+    - `type` (`A|CNAME`)
+    - `value`
+    - `ttl` (suggested)
+    - `proxy` recommendation (for Cloudflare)
 - `notes`: bullets including:
   - whether build succeeded
-  - whether domain attached (if requested)
   - any human steps needed (login/2FA)
+  - domain status (attached in Vercel or pending DNS)
 
 ## Non-goals
 - No app-specific feature dev (only deploy)
