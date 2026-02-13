@@ -38,9 +38,23 @@
   - “可写/不可写”边界（尤其 codes/tier list 等）
   - MVP 路由建议（可由 coding agent 调整，但不得违背锚点/真实性门槛）
 
+0.5) **输入落盘（必须，避免重复要用户输入）**
+- `docs/INPUTS.json`
+  - domain / keyword / target / anchorLink（以及任何覆盖参数）
+  - 该文件是本次 run 的 source-of-truth；后续步骤不得再次向用户重复索取。
+
+0.6) **图片素材库（必须，供 coding agent 丰富站点）**
+- `assets/game/`
+  - 仅允许来自 anchorLink / 官方 / 平台（如 Roblox）可验证来源的“游戏素材”（截图、icon、封面等）
+- `assets/youtube/`
+  - YouTube thumbnails（UGC 参考素材；需附来源 URL；避免暗示官方背书）
+- `docs/IMAGE_SOURCES.md`
+  - 逐项列出：文件路径 → 来源 URL → 用途建议 → 许可/风险备注（官方/UGC）
+
 1) 本地项目目录（按产品编号）
 - Location: `~/Projects/<P####>_<domain>/`
 - Tech: Next.js（App Router 优先；TypeScript）
+- **Hard rule:** 如果已存在同编号/同域名项目目录（例如 `P0066_<domain>`），必须复用并在其内增补（不得新建第二份目录）。
 
 2) GitHub repo（已存在则复用）
 - Owner: 默认 `mindfulunlimited`（可覆盖）
