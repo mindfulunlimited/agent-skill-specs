@@ -24,6 +24,18 @@
 - （可选）为缺失的 skill 单页生成 stub：
   - `00_System/OpenClaw/Skills/<skill-name>.md`
 
+## 重装/迁移恢复（必须写入文档并可一键执行）
+- Durable sources（先恢复/拉取）：
+  - `~/agent-skill-specs/agent-skill-specs/`
+  - `~/Documents/ObsidianVault/`
+- 安装 OpenClaw 后，一键恢复 OpenClaw 运行时 skills：
+
+```bash
+python3 ~/.openclaw/skills/skill-registry/scripts/sync_skills.py
+```
+
+- 同步硬规则：Spec > OpenClaw > Obsidian
+
 ## Watchdog 判定规则（MVP）
 - 若 cron jobs.json 中存在 name 以 `watchdog:` 开头 且 message 或 name 中包含该 skill 名 → 记为 ✅
 - 否则记为 —
