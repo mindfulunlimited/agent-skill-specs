@@ -10,9 +10,13 @@ This is NOT troubleshooting (health fixes). It is a **performance digest**: winn
 - mode:
   - `daily_yesterday_vs_7day_avg` (primary)
   - `weekly_7d_vs_prev7d` (secondary)
+- required comparison windows (always include both in outputs):
+  - `last_7d_vs_prev_7d`
+  - `last_28d_vs_prev_28d`
 - time range defaults:
   - daily: yesterday vs prior 7-day average
-  - weekly: last 7 days vs previous 7 days
+  - plus mandatory context from 7d and 28d comparisons
+  - weekly: last 7 days vs previous 7 days + 28d context
 
 ## Account mapping (hard gate)
 - New standard (future projects): GA + GSC use `liangcl2026@gmail.com`.
