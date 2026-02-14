@@ -57,6 +57,12 @@ For each product:
 - No secrets in outputs.
 - No automatic fixes; if severe anomalies found, recommend running `gsc-troubleshoot` oneshot.
 
+## Browser/runtime (hard rule)
+- Must run on **Real Google Chrome Stable via CDP attach**.
+- Do NOT spawn Chrome for Testing / chrome-headless-shell.
+- Preferred CDP port for growth/ops: **9223**.
+- If CDP attach fails, stop and request HITL (login/2FA). Do not fall back.
+
 ## Delivery
 - Daily digest can be sent to Telegram.
 - Weekly digest can be written to Obsidian and optionally sent.
