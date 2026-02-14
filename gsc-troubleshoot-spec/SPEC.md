@@ -49,6 +49,15 @@ This skill is about **quality + correctness**, not growth strategy.
   - after (live URL headers + updated GSC validation state)
 
 ## Safety
+
+## Account mapping (legacy vs new standard)
+- **New standard (all future projects):** GA + GSC use `liangcl2026@gmail.com`.
+- **Legacy default (unless product dossier overrides):**
+  - GA: `yddcreation@gmail.com`
+  - GSC: `qianliuster@gmail.com`
+
+Hard rule: before any action in GA/GSC, confirm the top-right Google account email matches the required one.
+
 - Do not delete GSC properties.
 - Prefer adding Owners (shared ownership) over migration.
 - Do not store passwords/secrets in repos, dossiers, or Obsidian.

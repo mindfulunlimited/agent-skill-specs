@@ -17,6 +17,15 @@ This skill is about **planning + execution backlog**, not troubleshooting.
 - category: SHOULD be read from product dossier (`docs/PRODUCT_PROFILE.json`) when present (ads/affiliate content, SaaS subscription, game tools, etc.).
 
 ## External tools constraint
+
+## Account mapping (legacy vs new standard)
+- **New standard (all future projects):** GA + GSC use `liangcl2026@gmail.com`.
+- **Legacy default (unless product dossier overrides):**
+  - GA: `yddcreation@gmail.com`
+  - GSC: `qianliuster@gmail.com`
+
+Hard rule: before any action in GA/GSC, confirm the top-right Google account email matches the required one.
+
 - Semrush/Similarweb must be accessed via the **3ue portal** (not official sites).
 - Credentials must NOT be stored in repos. Use centralized ops account note:
   - `~/Documents/Operations/Accounts/SEO_Tools_3ue.md`
