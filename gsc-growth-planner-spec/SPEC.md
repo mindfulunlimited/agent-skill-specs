@@ -13,6 +13,8 @@ This skill is about **planning + execution backlog**, not troubleshooting.
 - domain / product
 - market: Global or specific country (default: Global; rerun for US if US-focused)
 - competitors: optional seed list (3–5). Skill must also discover **SERP competitors** from keyword tools.
+- optional (recommended for legacy projects): GA4 property name (e.g. `bnptv`) to avoid picker ambiguity.
+- category: SHOULD be read from product dossier (`docs/PRODUCT_PROFILE.json`) when present (ads/affiliate content, SaaS subscription, game tools, etc.).
 
 ## External tools constraint
 - Semrush/Similarweb must be accessed via the **3ue portal** (not official sites).
